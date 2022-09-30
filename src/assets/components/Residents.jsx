@@ -12,17 +12,21 @@ useEffect(() => {
 console.log(resident);
 return (
     <div>Residents
-        <h2>{}</h2>
-       
+        <h2></h2>
+        <div> <h3>{resident?.status}</h3> </div>
+        <div>
+<img src={resident?.image} alt="" />
+        </div>
+
+       <div>
         <ul>
-            <li>Name: id:</li>
-            <li>origin:</li>
-            <li>species</li>
-            <li>type:</li>
-            <li>planet</li>
-
-
+            <li>Name: {resident?.name} id: {resident?.id}</li>
+            <li>origin: {resident?.origin.name}</li>
+            <li>species: {resident?.species}</li>
+            <li>type: {resident?.type}</li>
+            <li>Gender: {resident?.gender}</li>
         </ul>
+        </div>
     </div>
 )
 }
