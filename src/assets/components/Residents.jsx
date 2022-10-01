@@ -9,7 +9,7 @@ useEffect(() => {
     .then(res =>setResident(res.data))
     .catch(err => console.log(err))
 },[])
-console.log(resident);
+//console.log(resident);
 return (
     <div>Residents
         <h2></h2>
@@ -18,14 +18,15 @@ return (
 <img src={resident?.image} alt="" />
         </div>
 
-       <div>
-        <ul>
-            <li>Name: {resident?.name} id: {resident?.id}</li>
-            <li>origin: {resident?.origin.name}</li>
-            <li>species: {resident?.species}</li>
-            <li>type: {resident?.type}</li>
-            <li>Gender: {resident?.gender}</li>
-        </ul>
+        <div>
+            <ul>
+                <li>Name: {resident?.name} id: {resident?.id}</li>
+                <li>origin: {resident?.origin.name}</li>
+                <li>species: {resident?.species}</li>
+                <li>type: {resident?.type}</li>
+                <li>Gender: {resident?.gender}</li>
+                <li>Episodes: {resident?.episode.length}</li>
+            </ul>
         </div>
     </div>
 )
