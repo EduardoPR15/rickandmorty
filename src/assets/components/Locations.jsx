@@ -50,7 +50,7 @@ if(Residents === false){
 return (
     <div >
     <div className="gunTop">
-        <img src="public\mi portada.jpg" alt="" />
+        <img src="../mi portada.jpg" alt="" />
     </div>
         <div className="Font">
         <form onSubmit={handleSubmit}>
