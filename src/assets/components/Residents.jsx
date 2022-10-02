@@ -9,13 +9,37 @@ useEffect(() => {
     .then(res =>setResident(res.data))
     .catch(err => console.log(err))
 },[])
-//console.log(resident);
+let status = resident?.status
+let dinamicClass = ""
+//console.log(status);
+function status1(status) {
+    let dinamicClass = ""
+
+if (status === "Alive") {
+let dinamicClass = "Alive"
+return dinamicClass
+ }
+if (status === "unknown") {
+    let dinamicClass = "Unknown"
+    return dinamicClass
+}
+ if (status === "Dead") {
+   let dinamicClass ="Dead"
+    return dinamicClass
+}
+return dinamicClass
+}
+
+const functionClass = status1(status)
+//console.log(functionClass);
 return (
-    <div>Residents
-        <h2></h2>
-        <div> <h3>{resident?.status}</h3> </div>
-        <div>
-<img src={resident?.image} alt="" />
+    
+    <div className='cardResident'>
+ 
+        <div className={functionClass}>
+             <h3>{resident?.status}</h3> </div>
+        <div className='residentImage'>
+                <img src={resident?.image} alt="" />
         </div>
 
         <div>
@@ -28,7 +52,9 @@ return (
                 <li>Episodes: {resident?.episode.length}</li>
             </ul>
         </div>
+        
     </div>
+    
 )
 }
 

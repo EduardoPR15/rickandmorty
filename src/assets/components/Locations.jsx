@@ -43,14 +43,16 @@ const handleChange = event =>{
     .then(res => setSuggestedList(res.data.results) )
     .catch(err => console.log(err))
 }
-
-//console.log(suggestedList);
+if(Residents === false){
+    console.log("ola");
+}
+//console.log(Residents);
 return (
     <div >
         
-        <div>
+        <div className="Font">
         <form onSubmit={handleSubmit}>
-            <input placeholder='type a location' id='idLocation' type="text"  onChange={handleChange}/>
+            <input  placeholder='type a location' id='idLocation' type="text"  onChange={handleChange}/>
             <button>Search</button>
         </form>
         <div>
@@ -64,16 +66,28 @@ return (
                 <Errordiv/>
                 : 
                 <>
-        <div>
+        <div className='cardLocation'>
             <h2>Location: {location?.name} Id: {location?.id}</h2>
             <h3>Type: {location?.type}</h3>
             <h3>Dimension: {location?.dimension}</h3>
             <span>Population: {location?.residents.length}</span>
-            {location?.residents.map(urlResident => (
-                <Residents 
-                key={urlResident}
-                urlResident={urlResident}/> ) )}
         </div>
+                    
+                    
+                
+                {
+                    Residents ?  
+                <div className="BoxResident">
+                            {location?.residents.map(urlResident => (
+                                <Residents 
+                                key={urlResident}
+                                urlResident={urlResident}/> ) )}
+                        </div>
+                            :
+                        <div className="prueba1">
+
+                    </div>}
+        
         </>
             }
         
