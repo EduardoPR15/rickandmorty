@@ -4,7 +4,7 @@ const Filterlist = ({suggestedList, setSearchInput}) => {
     console.log(suggestedList);
 const handleClick = id => setSearchInput(id)
   return (
-    <div> <h2>list</h2>
+    <div> <h2>list of locations</h2>
     <ul>
         {
             suggestedList?.map(location => (

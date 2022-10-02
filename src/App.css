@@ -2,6 +2,10 @@
     font-family: DGfont;
     src: url(../font/DS-DIGI.TTF);
 }
+@font-face {
+    font-family: TitlesFont;
+    src: url(../public/font/get_schwifty.ttf);
+}
 *{
     padding: 0;
     margin: 0;
@@ -18,6 +22,9 @@
 }
 .cardLocation{
     background-color: red;
+}
+.cardLocation h2{
+    font-family: DGfont;
 }
 .prueba1{
     width: 200px;
@@ -73,15 +80,70 @@
     text-align: center;
     
 }
-.Font input {
+.gunTop{
+    position: relative;
+    top: 60px;
+    margin: auto;
+    width: 110px;
+    height: 170px;
+    background-color: #A10E20;
+    border: transparent;
+    overflow: hidden;
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
+.gunTop img{
+    position: relative;
+    width: 250%;
+    height: 150%;
+    right: 95px;
+    bottom:  50px;
+}
+.Font{
+background-color: #FDFDFD;
+    margin: auto;
+    width: 300px;
+    height: 130px;
+    align-content: center;
+    clip-path:  circle(70% at 50% 20%);
+    border: transparent;
+}
+
+.Fonts{
+    padding-top: 10px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 0 0)
+}
+.Font input{
+    margin-top: 10px;
     text-align: center;
     width: 300px;
     height: 40px;
     font-size: 30px;
     font-style: normal;
-    background-color: #8B0505;
+    background-color: #A10E20;
     color: #ff0000;
     text-decoration-color: #26354B;
     font-family: DGfont;
+    z-index: 1000000000;
     
+}
+.buttonSearch{
+    background-color: #535352;
+    border-radius: 50%;
+    border: transparent;
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 110px;
+    
+}
+
+.list{
+    background-color:#DCDCDC;
+    margin: auto;
+    width: 245px;
+    
+}
+.list h2{
+    font-family: TitlesFont;
+    text-align: center;
 }

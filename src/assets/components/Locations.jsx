@@ -49,15 +49,20 @@ if(Residents === false){
 //console.log(Residents);
 return (
     <div >
-        
+    <div className="gunTop">
+        <img src="public\mi portada.jpg" alt="" />
+    </div>
         <div className="Font">
         <form onSubmit={handleSubmit}>
             <input  placeholder='type a location' id='idLocation' type="text"  onChange={handleChange}/>
-            <button>Search</button>
+            <button className="buttonSearch">Search</button>
         </form>
-        <div>
+       
+        </div> 
+        <div className="gun"></div>
+        <div className="list">
             <Filterlist suggestedList={suggestedList} setSearchInput={setSearchInput}/>
-        </div>
+        
         </div>
         <Navbar searchInput={searchInput}/>
 
@@ -67,7 +72,7 @@ return (
                 : 
                 <>
         <div className='cardLocation'>
-            <h2>Location: {location?.name} Id: {location?.id}</h2>
+            <h2>{location?.name} Id: {location?.id}</h2>
             <h3>Type: {location?.type}</h3>
             <h3>Dimension: {location?.dimension}</h3>
             <span>Population: {location?.residents.length}</span>
