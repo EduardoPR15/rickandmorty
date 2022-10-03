@@ -42,7 +42,7 @@ return (
                 <img src={resident?.image} alt="" />
         </div>
 
-        <div>
+        <div className='residentData'>
             <ul>
                 <li>Name: {resident?.name} id: {resident?.id}</li>
                 <li>origin: {resident?.origin.name}</li>
