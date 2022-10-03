@@ -207,7 +207,10 @@ background-color: #FDFDFD;
     height: 70px;
     margin-top: 10px;
     margin-left: 110px;
-    
+}
+.buttonSearch p{
+    font-family: 'Roboto Mono';
+    font-size: large;
 }
 
 .list{    

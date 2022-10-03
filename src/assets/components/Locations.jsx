@@ -56,7 +56,7 @@ return (
         <div className="Font">
         <form onSubmit={handleSubmit}>
             <input  placeholder='type a location' id='idLocation' type="text"  onChange={handleChange}/>
-            <button className="buttonSearch">Search</button>
+            <button className="buttonSearch"> <p>Search</p></button>
         </form>
        
         </div> 
