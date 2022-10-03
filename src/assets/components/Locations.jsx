@@ -49,7 +49,7 @@ if(Residents === false){
 //console.log(Residents);
 return (
     <div >
-    <div className="gunTop">
+    <div className="gunTop" id='Home'>
         <img src="../mi portada.jpg" alt="" />
     </div>
         <div className="Font">
@@ -72,10 +72,15 @@ return (
                 : 
                 <>
         <div className='cardLocation'>
-            <h2>{location?.name} Id: {location?.id}</h2>
+            <div className="locationGif">
+        <iframe src="https://gifer.com/embed/ZBr" frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com"></a></p>
+            </div>  
+            <div className="locationbox">
+          <h2>{location?.name} Id: {location?.id}</h2>
             <h3>Type: {location?.type}</h3>
             <h3>Dimension: {location?.dimension}</h3>
             <span>Population: {location?.residents.length}</span>
+        </div>  
         </div>
                     
                     

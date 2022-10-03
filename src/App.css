@@ -20,8 +20,25 @@
     min-height:700px;
     
 }
+.Navbar{
+    position: absolute;
+    top: 0;
+    position: fixed;
+}
+.locationGif{
+    width: 250px;
+    height: 150px;
+}
+.locationGif iframe {
+width: 100%;
+}
 .cardLocation{
+    display: flex;
     background-color: red;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 500px;
+    min-width: 375px
 }
 .cardLocation h2{
     font-family: DGfont;
@@ -147,16 +164,16 @@ background-color: #FDFDFD;
 }
 
 .list{    
-    position: relative;
-    background-color:#DCDCDC;
-    width: 245px;
-    align-items: center;
     margin: auto;
+    background-color:#DCDCDC;
+    width: 230px;
+    z-index: 20;
 }
 .listAboslute{
     position: absolute;
     background-color: #535352;
     z-index: 10;
+    width: 230px;
 }
 .list h2{
     font-family: TitlesFont;
