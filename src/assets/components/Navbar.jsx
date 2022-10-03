@@ -5,9 +5,9 @@ const Navbar = ({searchInput}) => {
 
 return (
     <div className='Navbar'>
-        <h1>Navbar</h1>
+        
         {/* <Searchform searcInput={searchInput} /> */}
-        <a href="#Home">Home</a>
+        <a href="#Home"><img src="../58f37720a4fa116215a9240f.png" alt="" /></a>
     </div>
 )
 }

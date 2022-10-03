@@ -49,6 +49,7 @@ if(Residents === false){
 //console.log(Residents);
 return (
     <div >
+        <div className="Title"> </div>
     <div className="gunTop" id='Home'>
         <img src="../mi portada.jpg" alt="" />
     </div>

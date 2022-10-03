@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
 @font-face {
     font-family: DGfont;
     src: url(../font/DS-DIGI.TTF);
 }
 @font-face {
     font-family: TitlesFont;
-    src: url(../public/font/get_schwifty.ttf);
+    src: url(../font/get_schwifty.ttf);
 }
 *{
     padding: 0;
@@ -12,18 +13,47 @@
     box-sizing: border-box;
 }
 :root{
-    --backgroundPrincipal: #26354B;
+    --backgroundPrincipal: #26354bad;
 
 }
 .App{
-    background-color: var(--backgroundPrincipal);
+    
+    background-image: url(../public/633176.jpg);
     min-height:700px;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-bottom: 25px;
     
 }
+.Title{
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-image: url(../public/625910.png);
+    background-size: 100%;
+    z-index: 11;
+    position: relative;
+    margin-bottom: 10px;
+}
+Title img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+}
 .Navbar{
-    position: absolute;
-    top: 0;
+    position:absolute;
+    z-index: 10;
+    top: 0px;
     position: fixed;
+    width: 150px;
+    height: auto;
+
+}
+.Navbar img{
+    width: 100%;
 }
 .locationGif{
     width: 250px;
@@ -31,14 +61,18 @@
 }
 .locationGif iframe {
 width: 100%;
+border-radius: 10px 0 0 10px;
+padding-right: 5px;
 }
 .cardLocation{
     display: flex;
-    background-color: red;
+    background-color:#f0e14a;
     margin: auto;
     margin-top: 50px;
     max-width: 500px;
-    min-width: 375px
+    min-width: 375px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
 .cardLocation h2{
     font-family: DGfont;
@@ -51,29 +85,38 @@ width: 100%;
 .BoxResident{
     padding-top:30px;
     display: grid;
-    background-color: antiquewhite;
+    background-color: var(--backgroundPrincipal);
+    opacity: 1;
     /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     grid-column-gap: 100px ;
     grid-row-gap: 100px;
     margin-right: 10%;
     margin-left: 10%;
+    grid-template: subgrid;
     
 }
 .cardResident{
+    opacity: 1;
     align-items: center;
     margin: auto;
-    background-color:red;
+    background-color:#35c9dd;
     max-width: 300px;
     height: 480px;
     list-style: none;
-    
+    border-radius: 15px;
+    box-shadow: #00ff15c9 0px 15px, rgba(45, 255, 3, 0.3) 0px 20px, rgba(51, 255, 0, 0.2) 0px 25px, rgba(85, 240, 46, 0.1) 0px 30px, rgba(85, 240, 46, 0.05) 0px 35px;
+    font-family: 'Roboto Mono';
+    font-size: large;
 }
 .residentImage{
+    margin-top: -25px;
     width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 .residentImage img{
+    border-radius: 15px 15px 0 0;
     width: 100%;
     height: 100%;
 }
@@ -82,12 +125,13 @@ width: 100%;
     
 }
 .Alive{
-    background-color: green;
+    background-color: #00ff15c9;
     width: 80px;
     height: auto;
     position: relative;
     top: 30px;
     text-align: center;
+    font-family: DGfont;
 }
 .Dead{
     background-color: red;
@@ -96,9 +140,11 @@ width: 100%;
     position: relative;
     top: 30px;
     text-align: center;
+    font-family: DGfont;
 }
 .Unknown{
     background-color: gray;
+    font-family: DGfont;
     width: 80px;
     height: auto;
     position: relative;
@@ -181,4 +227,20 @@ background-color: #FDFDFD;
 }
 .listAboslute ul{
     list-style: none;
+    
+}
+@media( min-width: 600px){
+    .Navbar{
+        display: none;
+        width: 300px;
+    
+    }
+    .Title{
+        margin: auto;
+        width: 900px;
+        height: 250px;
+        overflow: hidden;
+        background-image: url(../public/625910.png);
+        background-size: 900px;
+    }
 }
